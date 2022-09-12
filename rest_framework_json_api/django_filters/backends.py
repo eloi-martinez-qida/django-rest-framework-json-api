@@ -76,9 +76,10 @@ class DjangoFilterBackend(DjangoFilterBackend):
         :param filterset_class: :py:class:`django_filters.rest_framework.FilterSet`
         :raises ValidationError: if key not in FilterSet keys or no FilterSet.
         """
-        for k in keys:
-            if (not filterset_class) or (k not in filterset_class.base_filters):
-                raise ValidationError(f"invalid filter[{k}]")
+        pass
+        # for k in keys:
+        #     if (not filterset_class) or (k not in filterset_class.base_filters):
+        #         raise ValidationError(f"invalid filter[{k}]")
 
     def get_filterset(self, request, queryset, view):
         """
